@@ -44,10 +44,12 @@ gallery:
     title:      "Extended ward equivalent test network"    
 ---
 
+pandapipes is an easy to use network calculation program aimed at automation of analysis of district heating
+and gas systems. It utilizes the data analysis library pandas and is also closely related to
+the power systems calculation program pandapower.
 
-pandapower builds on the data analysis library pandas and the power system analysis toolbox PYPOWER to create an easy to use network calculation program aimed at automation of analysis and optimization in power systems.
-What started as a convenience wrapper around PYPOWER has evolved into a stand-alone power systems analysis toolbox with extensive power system [model library](#modeling),
-an [improved power flow solver](#pf) and many other [power systems analysis functions](#analysis).
+pandapipes and pandapower can be used in combination to analyze multi energy networks. An environment able to couple both
+tools is pandapowerpro.
 
 ## Why another tool?
 
@@ -285,17 +287,31 @@ If you use pandapower in your work, we kindly ask you to cite the [pandapower re
 
 <h2 id="license">License</h2>
 
-pandapower is published under the following 3-clause BSD license: 
+pandapipes is published under the following 3-clause BSD license: 
 
-> Copyright (c) 2018 by University of Kassel and Fraunhofer Institute for Fraunhofer Institute for Energy Economics and Energy System Technology (IEE) Kassel and individual contributors (see AUTHORS file for details). All rights reserved.
-> Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
->      
-> 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
->     
-> 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
->     
-> 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
->     
-> THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, NCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+> Copyright (c) 2018 by University of Kassel and Fraunhofer Institute for Fraunhofer Institute for 
+    Energy Economics and Energy System Technology (IEE) Kassel and individual contributors
+   (see AUTHORS file for details). All rights reserved.
+>   Redistribution and use in source and binary forms, with or without modification, are permitted 
+    provided that the following conditions are met:   
 
+
+ > 1. Redistributions of source code must retain the above copyright notice, this list of conditions
+    and the following disclaimer.
+
+> 2. Redistributions in binary form must reproduce the above copyright notice, this list of
+    conditions and the following disclaimer in the documentation and/or other materials provided
+    with the distribution.
+
+> 3. Neither the name of the copyright holder nor the names of its contributors may be used to 
+    endorse or promote products derived from this software without specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR 
+    IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND 
+    FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR 
+    CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+    DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
+    DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+    WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+    WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 

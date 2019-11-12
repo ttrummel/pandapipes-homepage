@@ -10,53 +10,48 @@ classes:
    - wide
 ---
 
-## Installing Python
+***NOTE: Tab-Icon ist noch von pandapower.***
 
-pandapower is tested with Python 2.7, 3.4, 3.5 and 3.6. We recommend the [Anaconda Distribution](https://www.anaconda.com/), which provides a Python distribution that already includes a lot of modules for scientific computing that are needed. Simply [download](https://www.anaconda.com/download) and install the newest version of Anaconda and you are all set to run pandapower.
+## Installing pandapower
 
-Of course it is also possible to use pandapower with other distributions besides Anaconda. It is however important that the following packages are included:
+For the installation of pandapipes it is necessary to install pandapower first. For the installation please follow the detailed instructions which can be found on the [pandapower website](http://www.pandapower.org/start/). 
 
-- numpy
-- scipy
-- numba
-- matplotlib
 
-Since these packages depend on C-libraries, they cannot be easily installed through pip on Windows systems.
-If you use a distribution that does not include one of these packages, you either have to build these libraries yourself or switch to a different distribution.
 
-<h2 id="install">Installing pandapower</h2>
+<h2 id="install">Installing pandapipes</h2>
+***NOTE: Nur pandapower zu pandapipes geändert.***
         
 <h3 id="pip">Through pip</h3>
 
-The easiest way to install pandapower is through pip:
+The easiest way to install pandapipes is through pip:
 
 1. Open a command prompt (e.g. start-->cmd on windows systems)
 
-2. Install pandapower by running:
+2. Install pandapipes by running:
 
-        pip install pandapower
+        pip install pandapipes
 
 <h3 id="nopip">Without pip</h3>
 
-If you don't have internet access on your system or don't want to use pip for some other reason, pandapower can also be installed without using pip:
+If you don't have internet access on your system or don't want to use pip for some other reason, pandapipes can also be installed without using pip:
 
-1.  Download and unzip the current pandapower distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
+1.  Download and unzip the current pandapipes distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
 2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the setup.py file with the command cd
     \<folder\> :
 
         cd %path_to_pandapower%\pandapower-x.x.x\
 
-3.  Install pandapower by running :
+3.  Install pandapipes by running :
 
         python setup.py install
 
 <h3 id="develop">Development Version</h3>
 
-To install the latest development version of pandapower from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
+To install the latest development version of pandapipes from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
 
 1. Download and install [git](https://git-scm.com). 
 
-2. Open a git shell and navigate to the directory where you want to keep your pandapower files.
+2. Open a git shell and navigate to the directory where you want to keep your pandapipes files.
 
 3. Run the following git command:
 
@@ -64,14 +59,14 @@ To install the latest development version of pandapower from [github](https://gi
 
 4. Navigate inside the repository and check out the develop branch:
 
-        cd pandapower
+        cd pandapipes
         git checkout develop
        
-5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapower files are located. Run:
+5. Open a command prompt (cmd or anaconda command prompt) and navigate to the folder where the pandapipes files are located. Run:
 
         pip install -e .
         
-   This registers your local pandapower installation with pip.
+   This registers your local pandapipes installation with pip.
         
 ## Test your installation <a name="test"></a>
 
@@ -100,46 +95,51 @@ If everything is installed correctly, all tests should pass or xfail (expected t
 
 ## A short introduction <a name="intro"></a>
 
-A network in pandapower is represented in a pandapowerNet object, which
-is a collection of pandas Dataframes. Each dataframe in a pandapowerNet
-contains the information about one pandapower element, such as line,
-load transformer etc.
+A network in pandapipes is represented in a pandapipesNet object, which
+is a collection of pandas Dataframes. Each dataframe in a pandapipesNet
+contains the information about one pandapipes element, such as pipe,
+junction, sink, etc.
 
-We consider the following simple 3-bus example network as a minimal
+We consider the following simple example network as a minimal
 example:
 
-![](/images/getting_started/3bus-system.png)
+![](/images/getting_started/simple_network.png)
 
 
 ### Creating a network
 
-The above network can be created in pandapower as follows:
+The above network can be created in pandapipes as follows:
 
-    import pandapower as pp
+    import pandapipes as pp
     #create empty net
     net = pp.create_empty_network() 
 
-    #create buses
-    b1 = pp.create_bus(net, vn_kv=20., name="Bus 1")
-    b2 = pp.create_bus(net, vn_kv=0.4, name="Bus 2")
-    b3 = pp.create_bus(net, vn_kv=0.4, name="Bus 3")
+    #create junctions
+    j1 = pp.create_junction(net, pn_bar=5, name="Junction 1")
+    j2 = pp.create_junction(net, pn_bar=5, name="Junction 2")
+    j3 = pp.create_junction(net, pn_bar=5, name="Junction 3")
 
-    #create bus elements
-    pp.create_ext_grid(net, bus=b1, vm_pu=1.02, name="Grid Connection")
-    pp.create_load(net, bus=b3, p_mw=0.1, q_mvar=0.05, name="Load")
+    #create junction elements
+    pp.create_ext_grid(net, junction=j1, p_bar=5, name="Grid Connection")
+    pp.create_sink(net, junction=j3, mdot_kgps=50, name="Sink")
 
     #create branch elements
-    tid = pp.create_transformer(net, hv_bus=b1, lv_bus=b2, std_type="0.4 MVA 20/0.4 kV", name="Trafo")
-    pp.create_line(net, from_bus=b2, to_bus=b3, length_km=0.1, name="Line",std_type="NAYY 4x50 SE")   
+    pp.create_pipe(net, from_junction=j1, to_junction=j2, length_km=0.1, diameter_m=0.05, name="Pipe")
+    pp.create_valve_pipe(net, from_junction=j2, to_junction=j3, length_km=2, diameter_m=0.05)   
 
-Note that you do not have to calculate any impedances or tap ratio for
-the equivalent circuit, this is handled internally by pandapower
-according to the pandapower [transformer model]. The [standard type
-library] allows comfortable creation of line and transformer elements.
 
-The pandapower representation now looks like this:
 
-![image](/images/getting_started/pandapower_datastructure.png)
+The pandapipes representation now looks like this:
+
+![image](/images/getting_started/pandapipes_results1.png)
+
+
+
+
+
+
+![image](/images/getting_started/pandapipes_results2.png)
+
 
 ### Running a Power Flow
 
