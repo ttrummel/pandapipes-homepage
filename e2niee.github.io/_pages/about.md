@@ -9,39 +9,57 @@ toc_label: <a href="#site-nav">About pandapipes</a>
 classes:
   - wide   
 gallery:
-  - url:        /images/about/validation/test_trafo3w.png
-    image_path: /images/about/validation/test_trafo3w_tn.png
-    title:      "Three-winding transformer test network"
-  - url:        /images/about/validation/test_ward.png
-    image_path: /images/about/validation/test_ward_tn.png
-    title:      "Ward equivalent test network"
-  - url:        /images/about/validation/test_gen.png
-    image_path: /images/about/validation/test_gen_tn.png
-    title:      "Generator test network"
-  - url:        /images/about/validation/test_ext_grid.png
-    image_path: /images/about/validation/test_ext_grid_tn.png
-    title:      "External grid test network"
-  - url:        /images/about/validation/test_line.png
-    image_path: /images/about/validation/test_line_tn.png
-    title:      "Line test network"
-  - url:        /images/about/validation/test_bus_bus_switch.png
-    image_path: /images/about/validation/test_bus_bus_switch_tn.png
-    title:      "Bus-bus switch test network"
-  - url:        /images/about/validation/test_load_sgen.png
-    image_path: /images/about/validation/test_load_sgen_tn.png
-    title:      "Static generator test network"
-  - url:        /images/about/validation/test_impedance.png
-    image_path: /images/about/validation/test_impedance_tn.png
-    title:      "Impedance test network"    
-  - url:        /images/about/validation/test_shunt.png
-    image_path: /images/about/validation/test_shunt_tn.png
-    title:      "Shunt test network"
-  - url:        /images/about/validation/test_trafo.png
-    image_path: /images/about/validation/test_trafo_tn.png
-    title:      "Two-winding transformer test network"    
-  - url:        /images/about/validation/test_xward.png
-    image_path: /images/about/validation/test_xward_tn.png
-    title:      "Extended ward equivalent test network"    
+  - url:        /images/about/validation/cross.png
+    image_path: /images/about/validation/cross.png
+    title:      "cross"
+  - url:        /images/about/validation/delta.png
+    image_path: /images/about/validation/delta.png
+    title:      "delta"
+  - url:        /images/about/validation/district.png
+    image_path: /images/about/validation/district.png
+    title:      "district"
+  - url:        /images/about/validation/H-net.png
+    image_path: /images/about/validation/H-net.png
+    title:      "H-net"
+  - url:        /images/about/validation/one_pipe.png
+    image_path: /images/about/validation/one_pipe.png
+    title:      "one_pipe"
+  - url:        /images/about/validation/parallel.png
+    image_path: /images/about/validation/parallel.png
+    title:      "parallel"
+  - url:        /images/about/validation/pumps.png
+    image_path: /images/about/validation/pumps.png
+    title:      "pumps"
+  - url:        /images/about/validation/square.png
+    image_path: /images/about/validation/square.png
+    title:      "square"
+  - url:        /images/about/validation/strand_net.png
+    image_path: /images/about/validation/strand_net.png
+    title:      "strand_net"
+  - url:        /images/about/validation/strand_net_stanet.png
+    image_path: /images/about/validation/strand_net_stanet.png
+    title:      "strand_net_stanet"
+  - url:        /images/about/validation/t-cross_1.png
+    image_path: /images/about/validation/t-cross_1.png
+    title:      "t-cross_1"
+  - url:        /images/about/validation/t-cross_2.png
+    image_path: /images/about/validation/t-cross_2.png
+    title:      "t-cross_2"
+  - url:        /images/about/validation/two_pipes.png
+    image_path: /images/about/validation/two_pipes.png
+    title:      "two_pipes"
+  - url:        /images/about/validation/two_pipes_two_ext_grid.png
+    image_path: /images/about/validation/two_pipes_two_ext_grid.png
+    title:      "two_pipes_two_ext_grid"
+  - url:        /images/about/validation/two_valves.png
+    image_path: /images/about/validation/two_valves.png
+    title:      "two_valves"
+  - url:        /images/about/validation/versatility_1.png
+    image_path: /images/about/validation/versatility_1.png
+    title:      "versatility_1"
+  - url:        /images/about/validation/versatility_2.png
+    image_path: /images/about/validation/versatility_2.png
+    title:      "versatility_2"
 ---
 
 pandapipes is an easy to use network calculation program aimed at automation of analysis of district heating
@@ -195,30 +213,68 @@ secondary network feeders.
 
 <h2 id="tests">Tests and Validation</h2>
 
-pandapower is tested with [pytest](https://docs.pytest.org/en/latest/). There are currently over 250 tests testing all kinds of pandapower functionality. The tests also include
-automatic validation of pandapower results from power flow or short circuit calculations against commercial software, to ensure that the
-implementation is correct.
+<font size="5"><b>STANET Tests</b></font>
+<br>
+So far pandapipes has been successfully tested 66 times with [pytest](https://docs.pytest.org/en/latest/).
+Various factors within the test networks were varied:
 
-<font size="5"><b>Continous Integration</b></font>
+ <ul>
+ <small>
+  <li>medium: gas and water</li>
+  <li>topology</li>
+  <li>pressure at external grids</li>
+  <li>number of external grids</li>
+  <li>friction model</li>
+  <li>length, diameter and roughness of a pipe</li>
+  <li>volume flow</li>
+  <li>number and height values of nodes</li>
+  <li>connection direction between nodes, for checking the correct flow velocity calculation</li>
+  <li>interconnections of sources, sinks, pumps, valves and external grids</li>
+  </small>
+ </ul>
+<br>
+The test nets were created using STANET and saved in CSV format so that a conversion to a json file could take place.
+The structures of all test networks are listed below:
 
-The tests are continuously carried out with Travis CI <a href="https://travis-ci.org/e2nIEE/pandapower"><img src="https://travis-ci.org/e2nIEE/pandapower.svg?branch=develop"></a>
-in Python 2.7, 3.4, 3.5 and 3.6 <a href="https://pypi.python.org/pypi/pandapower"><img src="{{"/images/home/shield_python_versions.svg"|relative_url}}"></a>.
-The test coverage rate is checked with codecov <a href="https://codecov.io/github/e2nIEE/pandapower?branch=master"><img src="https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop"></a>
-, code quality with codacy <a href="https://www.codacy.com/app/e2nIEE/pandapower/dashboard"><img src="https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3"></a>.
+{% include gallery caption="The pandapipes test networks." %}
 
-<font size="5"><b>Model Validation</b></font>
+<img src="{{"/images/about/validation/legend.png" | relative_url }}" alt=""/>
+<figcaption>Legend of the network components.</figcaption>
+<br>
+The relative error <math><mi>p<sub>diff</sub></mi></math> during the calculation of the pressures always has a value less than 0.01.
 
-To ensure that pandapower loadflow results are correct, all pandapower element behaviour is tested against DIgSILENT PowerFactory or PSS Sincal. 
+<math>
+    <mrow>
+        <mi>p<sub>diff</sub></mi>
+        <mo>=</mo>
+        <mo>|</mo>
+            <mo>(</mo>
+                <mi>p<sub>stanet</sub></mi>
+                <mo>-</mo>
+                <mi>p<sub>pandapipes</sub></mi>
+            <mo>)</mo>
+            <mo>/</mo>
+            <mi>p<sub>stanet</sub></mi>
+        <mo>|</mo>
+    </mrow>
+</math>
 
-There is a result test for each of the pandapower elements that checks loadflow results in pandapower against results from a commercial tools. 
+<br>
+Furthermore, the absolute error in the calculation of the flow velocities <math><mi>v<sub>diff,abs</sub></mi></math> is always less than 0.05.
 
-Here is an overview of all test networks that are used to validate the electric models:
+<math>
+    <mrow>
+        <mi>v<sub>diff,abs</sub></mi>
+        <mo>=</mo>
+        <mo>|</mo>
+        <mi>v<sub>stanet</sub></mi>
+        <mo>-</mo>
+        <mi>v<sub>pandapipes</sub></mi>
+        <mo>|</mo>
+    </mrow>
+</math>
 
-{% include gallery caption="The pandapower test grids for validation of the electric models." %}
-
-These minimal networks are used to compare power flow results with commercial tools. The tests ensure deviation
-do not surpass the following tolerances:
-
+<!--
 | **Parameter**     | **Max. Deviation**  | 
 |-------------------|---------------------| 
 | Voltage Magnitude | 0.000001 pu         | 
@@ -226,59 +282,9 @@ do not surpass the following tolerances:
 | Current           | 0.000001 kA         | 
 | Power             | 0.005 kW            | 
 | Element Loading   | 0.001%              | 
+-->
 
-The validation process is explained in the following for the transformer as an example.
 
-<font size="5"><b>Example: Transformer</b></font>
-
-To validate the pandapower transformer model, a transformer is created with the same parameters in pandapower and PowerFactory.
-To test all aspects of the model we use a transformer with:
-
- <ul>
- <small>
-   <li>both iron and copper losses > 0</li>
-   <li>nominal voltages that deviate from the nominal bus voltages at both sides</li>
-   <li>an active tap changer</li>
-   <li>a voltage angle shift > 0</li>
-   <li>more than one parallel transformer</li>
-  </small>
-  </ul> 
-
-We use a transformer with the following parameters:
-
- <ul>
- <small>
-  <li>vk_percent= 5.0</li>
-  <li>vkr_percent = 2.0</li>
-  <li>i0_percent = 0.4</li>
-  <li>pfe_kw = 2.0</li>
-  <li>sn_mva = 0.4</li>
-  <li>vn_hv_kv = 22</li>
-  <li>vn_lv_kv = 0.42</li>
-  <li>tap_max = 10</li>
-  <li>tap_neutral = 5</li>
-  <li>tap_min = 0</li>
-  <li>tap_st_percent = 1.25</li>
-  <li>tap_side = "hv"</li>
-  <li>tap_pos = 3</li>
-  <li>shift_degree = 150</li>
-  </small>
-  </ul> 
-
-To validate the in_service parameter as well as the transformer switch element, we create three transformers in parallel: one in service, one out of service and one with an open switch in open loop operation.
-All three transformers are connected to a 20kV / 0.4 kV bus network. The test network then looks like this:
-
-<img src="{{"/images/about/validation/test_trafo.png" | relative_url }}" alt=""/>
-   
-The loadflow result for the exact same network are now compared in pandapower and PowerFactory. It can be seen that both bus voltages:
-
-<img src="{{"/images/about/validation/validation_bus.png" | relative_url }}" alt=""/>
-    
-and transformer results:
-
-<img src="{{"/images/about/validation/validation_trafo.png" | relative_url }}" alt=""/>
-
-match within the margins defined above.
 
 <h2 id="citing">Citing pandapower</h2>
 
