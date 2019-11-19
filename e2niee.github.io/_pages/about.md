@@ -216,7 +216,7 @@ secondary network feeders.
 <font size="5"><b>STANET Tests</b></font>
 <br>
 So far pandapipes has been successfully tested 66 times with [pytest](https://docs.pytest.org/en/latest/).
-Various factors within the test networks were varied:
+Several factors within the test networks were varied:
 
  <ul>
  <small>
@@ -228,12 +228,13 @@ Various factors within the test networks were varied:
   <li>length, diameter and roughness of a pipe</li>
   <li>volume flow</li>
   <li>number and height values of nodes</li>
-  <li>connection direction between nodes, for checking the correct flow velocity calculation</li>
-  <li>interconnections of sources, sinks, pumps, valves and external grids</li>
+  <li>direction of pipe link between nodes, for checking the correct flow velocity calculation</li>
+  <li>combinations of sources, sinks, pumps, valves and external grids</li>
   </small>
  </ul>
 <br>
-The test nets were created using STANET and saved in CSV format so that a conversion to a json file could take place.
+The test nets were created with STANET and saved in CSV format so that a conversion
+into a json file can take place to perform the tests in [PyCharm](https://www.jetbrains.com/pycharm/).
 The structures of all test networks are listed below:
 
 {% include gallery caption="The pandapipes test networks." %}
@@ -286,9 +287,9 @@ Furthermore, the absolute error in the calculation of the flow velocities <math>
 
 
 
-<h2 id="citing">Citing pandapower</h2>
+<h2 id="citing">Citing pandpipes</h2>
 
-If you use pandapower in your work, we kindly ask you to cite the [pandapower reference paper](/references/#citing)
+If you use pandapipes in your work, we kindly ask you to cite the [pandapipes reference paper](/references/#citing)
 
 
 <h2 id="license">License</h2>
