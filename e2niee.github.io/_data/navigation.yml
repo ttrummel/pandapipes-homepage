@@ -4,7 +4,7 @@ main:
   - title: "About pandapipes"
     url: /about/
   - title: "Documentation"
-    url: http://pandapower.readthedocs.io
+    url: https://pandapipes.readthedocs.io/en/latest/
   - title: "References"
     url: /references/
   - title: "Contact"

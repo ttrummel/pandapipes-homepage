@@ -26,22 +26,22 @@ shields:
     
 excerpt: An easy to use open source tool for fluid system modeling, analysis and optimization with a high degree of automation.
 feature_row:
-  - image_path: /images/home/electric_modeling.png
-    title: "Electric Modeling"
-    excerpt: "Includes thoroughly validated equivalent circuit models for lines, transformers, switches and more."
+  - image_path: /images/home/fluid_modeling.png
+    title: "Fluid Modeling"
+    excerpt: "Includes thoroughly validated models for pipes, pumps, valves and more."
     url: "about/#modeling"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /images/home/power_flow.png
-    title: "Power System Analysis"
-    excerpt: "Supports power flow, optimal power flow, state estimation, short-circuit calculation and topological graph searches."
+    title: "Fluid System Analysis"
+    excerpt: "Supports stationary and quasi-stationary analysis of gas and district heating networks."
     url: "about/#analysis"
     btn_class: "btn--primary"
     btn_label: "Learn More"
   - image_path: /images/home/osi_symbol.png
     title: "Free and Open"
     excerpt: "Published under a BSD License and therefore free to use, modify and share however you want."
-    url: "https://github.com/e2nIEE/pandapower"
+    url: "https://github.com/e2nIEE/pandapipes"
     btn_class: "btn--primary"
     btn_label: "Explore on github"
 ---

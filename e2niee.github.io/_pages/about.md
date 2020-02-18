@@ -73,143 +73,88 @@ tools is pandapowerpro.
 
 **Motivation**<br>
 
-pandapower was developed to close the gap between commercial and open source power systems analysis tools.
-While open source power systems tools are flexible and can easily be customized, they often lack the detailed model libraries and
-comfortable usage of commercial power system analysis tools.
+Multi-Energy networks and the utilization of synergies between energy sectors are an important research topic today. To
+simulate these networks, it is crucial to not only include coupling points between the sectors in the analysis, but also to
+know the network state of sectors of interest. pandapipes was developed to provide a tool capable of calculating
+state variables of multi-energy networks. To do so, it can be used in combination with the open source software
+pandapower. If only gas or district heating networks are of interest, pandapipes can also be used as a stand-alone 
+application. 
 
-|                                                      | Electric Models                                                                                                                                | Automation                                                                                                               | Customization                                                                                           |
+In this sense, pandapipes closes two gaps: There are not many tools available which focus on multi-energy grid modeling.
+In addition, most software for calculating fluid networks is only commercially available. The following table
+summarizes some properties of commercial and open source tools, respectively.
+
+
+|                                                      | Fluid Models                                                                                                                                | Automation                                                                                                               | Customization                                                                                           |
 |------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
-| Commercial Tools (e.g. Sincal, PowerFactory, NEPLAN) | <span style="color:green">Thoroughly validated and easy to parametrize electric models of lines, transformers, switches etc.</span>            | <span style="color:red">Graphical User Interface applications that are difficult to automate.</span>                     | <span style="color:red">Restricted possibilities for customization due to proprietary code base.</span> |
-| Open Source Tools (e.g. MATPOWER, PYPOWER)           | <span style="color:red">Basic models that require parametrization by the user with expert knowledge.</span>                                    | <span style="color:green">Console application that are designed for automated evaluations.</span>                        | <span style="color:green">Open Source code base that can be freely modified and customized.</span>      |
-| **pandapower**                                       | <span style="color:green">**Thoroughly validated and easy to parametrize electric models of lines, transformers, switches etc.**</span>        | <span style="color:green">**Console application that is designed for automated evaluations.**</span>                     | <span style="color:green">**Open source code base that can be freely modified and customized.**</span>  |
+| Commercial Tools (e.g. Stanet, Sincal, NEPLAN)       | <span style="color:green">Thoroughly validated and easy to parametrize models of pipes, pumps, valves etc. Typically, multi-energy networks are not considered.</span>            | <span style="color:red">Graphical User Interface (GUI) applications that are difficult to automate.</span>                     | <span style="color:red">Restricted possibilities for customization due to proprietary code base.</span> |
+| Open Source Tools (e.g. Modelica, TransientEE)       | <span style="color:red">Models that require parametrization by the user with expert knowledge.</span>                                    | <span style="color:green">Console or GUI applications that might be automized.</span>                        | <span style="color:green">Open Source code base that can be freely modified and customized.</span>      |
+| **pandapipes**                                       | <span style="color:green">**Thoroughly validated and easy to parametrize fluid models of pipes, pumps, valves etc. with the focus on multi-energy grids.**</span>        | <span style="color:green">**Console application that is designed for automated evaluations.**</span>                     | <span style="color:green">**Open source code base that can be freely modified and customized.**</span>  |
 
-This is of course a very broad classification of tools that is only supposed to illustrate the focus of pandapower without
-considering the diverse landscape of existing tools. A more detailed analysis of existing open source tools and 
+This is of course a very broad classification of tools that is only supposed to illustrate the focus of pandapipes without
+considering the diverse landscape of existing tools. 
+
+TOBEREMOVED
+A more detailed analysis of existing open source tools and 
 the gap that pandapower closes can be found in <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a>.
 Overviews over existing open source tools can also be found in <a href="https://doi.org/10.1016/j.esr.2017.12.002" title="S. Pfenninger, L. Hirth, I. Schlecht et. al - Opening the black box of energy modelling: Strategies and lessons learned, Energy Strategy Reviews, Volume 19, Pages 63-71, 2018">[2]</a>
  or <a href="https://doi.org/10.1109/PES.2009.5275920" title="F. Milano, L. Vanfretti - State of the Art and Future of OSS for Power Systems, 2009 IEEE Power & Energy Society General Meeting, Calgary, AB, 2009">[3]</a>
-.
+END.
 
 **Scope**<br>
 
-pandapower is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
-- **transmission** and **subtransmission systems**, which are typically operated symmetrically.
-- **symmetric distribution systems**, which are commonly found in Europe.
-
-Distribution grids with unbalanced power flows, such as the feeder design common in North America, can currently not be
-analysed with pandapower.
+pandapipes is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
+- **Static** or **quasi-static** analyses of pressure and velocity distributions in fluid networks using incompressible or compressible media. Gas composition is assumed fix.
+-  **Static** or **quasi-static** analyses of temperature distributions in fluid networks. At present, this kind of analysis is only possible for incompressible media.
 
 
-<h2 id="modeling">Power System Modeling</h2>
-
-<h3 id="circuits">Equivalent Circuit Models</h3>
-pandapower is an element based network calculation tool that supports a wide variety of electric components. 
-The following table shows that the pandapower model library goes beyond of that of most existing open source tools:
-
-<img src="{{"/images/about/open_source_models.png" | relative_url }}" alt=""/>
-<figcaption>Comparison of open source electric model libraries <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
-
-All equivalent circuit models are [thoroughly validated](#tests) against commercial software tools and therefore allow industry level modeling of electric power systems.
+<h2 id="modeling">Fluid System Modeling</h2>
 
 <h3 id="datastructure">Tabular Data Structure</h3>
 
-pandapower is based on a tabular data structure, where every element type is represented by a table that holds all parameters for a specific
+pandapipes is based on a tabular data structure, where every element type is represented by a table that holds all parameters for a specific
 element and a result table which contains the element specific results of the different analysis methods. The tabular data structure is
-based on the Python library pandas. It allows storing variables of any data type, so that electrical parameters can be stored
+based on the Python library pandas. It allows storing variables of any data type, so that parameters can be stored
 together with status variables and meta-data, such as names or descriptions. The tables can be easily expanded and customized by adding new
-columns without influencing the pandapower functionality. All inherent pandas methods can be used to efficiently read, write and
+columns without influencing the pandapipes functionality. All inherent pandas methods can be used to efficiently read, write and
 analyze the network and results data.
 
 <h3 id="std_types">Standard Type Libraries</h3>
 
-pandapower includes a standard type library that allows the creation of lines and transformers using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapower basic standard types for convenient definition of networks.
+pandapipes includes a standard type library that allows the creation of pipes and pumps using predefined basic standard type parameters. The user can either define individual standard types or use the predefined pandapipes basic standard types for convenient definition of networks.
 
+<h3 id="std_types">Fluid Property Library</h3>
+
+pandapipes includes a fluid property library that allows the creation of fluid properties using predefined data. The user can either define individual properties or use the predefined data.
    
-<h2 id="analysis">Power System Analysis</h2>
+<h2 id="analysis">Fluid System Analysis</h2>
 
-pandapower supports the following power systems analysis functions:
+pandapipes supports the following fluid systems analysis functions:
 
-- [Power Flow](#pf)
-- [Optimal Power Flow](#opf)
-- [State Estimation](#se)
-- [Short-Circuit Calculation](#sc)
-- [Topological Graph Searches](#topology)
+- [Pipe Flow](#pf)
 
-<h3 id="pf">Power Flow</h3>
 
-The pandapower power flow solver is based on the Newton-Raphson method.
-The implementation was originally based on PYPOWER, but has been improved with respect to
-robustness, runtime and usability.
+<h3 id="pf">Pipe Flow</h3>
+
+The pandapipes pipe flow solver is based on the Newton-Raphson method.
 <br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/ac.html)</small>
 
 <font size="4"><b>Initialization</b></font>
 
-pandapower offers three different methods to initialize the complex voltage
-vector for the AC power flow calculation:
+pandapipes offers two different methods to initialize the solution
+vector for the pipe flow calculation:
    - flat start
-   - voltage vector of a previous calculation
-   - initialization with a DC power flow
+   - Solution vector of a previous calculation
    
 <font size="4"><b>Performance</b></font>
 
-Some parts of the pandapower solver have been accelerated using the
-JIT compiler [numba](https://numba.pydata.org/). This makes the pandapower Newton-Raphson significantly faster
-than the PYPOWER solver from which it was originally derived.
-To outline the difference in computational time, the convergence times for different standard MATPOWER
-case files are shown here for MATPOWER, PYPOWER and pandapower:
+The performance of pandapipes was compared to the commercially available software Stanet. Stanet is capable of calculating
+electric, gas and district heating grids but is not focused on sector coupling.......More info added later
+
 
 <img src="{{"/images/about/speed_comparison.png" | relative_url }}" alt=""/>
 <figcaption>Power flow speed convergence time comparison of different open source tools <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
 
-While PYPOWER and MATPOWER operate directly on the bus-branch model of the grid, the element based power system model in pandapower
-requires mappings and conversions of grid data and results into the tabular data structure. The graph shows that this
-conversion can take a significant amount of time in smaller networks, but its share decreases in larger networks. Even with 
-the conversion overhead, pandapower is the fastest of the three tools in large grids with >1000 nodes.
-
-<font size="4"><b>Other solvers</b></font>
-
-In addition to the default Newton-Raphson solver, pandapower also
-provides an implementation of a backward/forward sweep. pandapower also includes an Iwamoto variant of the Newton-Raphson,
-which includes a damping factor that can help convergence in ill-conditioned problems. It is also possible to use the fast
-decoupled as well as the Gauss-Seidel power flow algorithms through an interface to PYPOWER, although some features, such as ZIP loads
-or unsymmetrical impedances will only work with the pandapower solvers.
-
-<font size="4"><b>Unbalanced Power Flow</b></font>
-
-An unbalanced power flow is currently being implemented and a first version will hopefully be released soon. Follow the progress
-or join the implementation efforts on [github](https://github.com/e2nIEE/pandapower/issues/96), or subscribe to the [pandapower
-mailing list](contact.md) for updates.
-
-<h3 id="opf">Optimal Power Flow<br> </h3>
-pandapower allows solving AC and DC optimal power flow (OPF) problems through interfacing
-PYPOWER or [PowerModels.jl](https://github.com/lanl-ansi/PowerModels.jl). Costs, flexibilities and constraints are configured through
-the element-based pandapower data structure and internally converted to a PYPOWER or PowerModels data structure where the optimization
-is carried out. Static loads can be used as flexibilities in the OPF, which allows optimization dispatch of static generators as well 
-as load shedding. The cost function for each power injection or load can either be defined by a piecewise linear or a n-polynomial
-cost function of the active and reactive power output of the respective elements.
-<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/opf.html)</small>
-
-<h3 id="se">State Estimation<br></h3>
-pandapower includes a state estimation module that allows to estimate the electrical state of a network by dealing with inaccuracies
-and errors from measurement data. pandapower supports measurement of voltages, active and reactive power or currents at bus, lines and
-transformers. The state estimation is solved with a weighted-least-square method. It also includes a bad-data detection method based
-on a Chi-squared and a normalized residuals test.
-<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/estimation.html)</small>
-
-<h3 id="sc">Short-Circuit Calculation<br></h3>
-pandapower includes a short-circuit calculation that allows to calculate fault currents for three-phase, two-phase and single phase 
-short-circuits according to the IEC 60909 standard. The implementation also allows modeling power converter elements, such as 
-PV plants or wind parks, according to the 2016 revision of the standard.
-<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/shortcircuit.html)</small>
-
-<h3 id="topology">Graph Searches<br></h3>
-pandapower provides the possibility of graph searches using the Python library [NetworkX](https://networkx.github.io/) by providing a
-possibility to translate pandapower networks into NetworkX graphs.
-Once a network is translated into an abstract graph, all graph searches implemented in the NetworkX library can be used to analyze
-the network structure. Additionally, pandapower also provides some predefined search algorithms to tackle common graph search problems
-in electric networks, such as finding unsupplied buses or identifying buses on main or 
-secondary network feeders.
-<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/topology.html)</small>
 
 <h2 id="tests">Tests and Validation</h2>
 
@@ -296,9 +241,9 @@ If you use pandapipes in your work, we kindly ask you to cite the [pandapipes re
 
 pandapipes is published under the following 3-clause BSD license: 
 
-> Copyright (c) 2018 by University of Kassel and Fraunhofer Institute for Fraunhofer Institute for 
-    Energy Economics and Energy System Technology (IEE) Kassel and individual contributors
-   (see AUTHORS file for details). All rights reserved.
+> Copyright (c) 2020 by Fraunhofer Institute for Energy Economics
+and Energy System Technology (IEE) Kassel and individual contributors (see AUTHORS file for details).
+All rights reserved.
 >   Redistribution and use in source and binary forms, with or without modification, are permitted 
     provided that the following conditions are met:   
 
@@ -321,4 +266,5 @@ pandapipes is published under the following 3-clause BSD license:
     DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
     WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
     WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
+    
+    
