@@ -10,22 +10,22 @@ developers:
     nickname: Dennis
     email: dennis.cronbach@iee.fraunhofer.de
     image: "/images/contact/Cronbach.PNG"
-    text: "***NOTE: Aufgabenbeschreibung fehlt noch***"
+    text: 
   - name: "Daniel Lohmeier"
     nickname: Daniel
     email: daniel.lohmeier@iee.fraunhofer.de
     image: "/images/contact/Lohmeier.jpg"
-    text: "***NOTE: Aufgabenbeschreibung fehlt noch***"
+    text: 
   - name: "Simon Ruben Drauz"
     nickname: Simon
     email: simon.ruben.drauz@iee.fraunhofer.de
     image: "/images/contact/Drauz.png"
-    text: "***NOTE: Aufgabenbeschreibung fehlt noch***"
+    text: 
   - name: "Tanja Kneiske"
     nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
     image: "/images/contact/Kneiske.png"
-    text: "***NOTE: Aufgabenbeschreibung fehlt noch***"
+    text: 
   - name: "Martin Braun"
     nickname: Martin Braun
     email: martin.braun@uni-kassel.de
@@ -35,10 +35,10 @@ developers:
 <p></p>
 
 ## Mailing List <a name="list"></a>
-If you want to receive updates about new versions and other news about pandapipes, you can subscribe to the pandapower mailing list:
+If you want to receive updates about new versions and other news about pandapipes, you can subscribe to the pandapipes mailing list:
 
 [<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
-<small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
+<small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapipes">unsubscribe here</a>.</small>
 
 ## About us
 
@@ -55,7 +55,7 @@ And these are some of the people behind pandapipes:
 <div class="authors">
   {% for developer in page.developers %}
     <p>
-    <img style="padding:2px 2px 2px 2px; border:2px solid black; margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
+    <img style="padding:2px 2px 2px 2px;  margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
         <b>{{ developer.name }}</b> {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
@@ -65,7 +65,7 @@ And these are some of the people behind pandapipes:
   {% endfor %}
 </div>
 
-[See Full List of authors and contributors](http://pandapower.readthedocs.io/en/stable/about/authors.html){: .btn .btn--success .btn--large}
+[See Full List of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
 
 ## Impressum
 

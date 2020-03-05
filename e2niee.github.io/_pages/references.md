@@ -20,5 +20,5 @@ Up to now, no papers describing pandapipes have been published.
 
 The following publications discuss the tool itself and implementation details:
 
-- ***NOTE: Gab es hier ein Dokument zu pandapipes?***
+
 

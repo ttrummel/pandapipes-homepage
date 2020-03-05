@@ -10,7 +10,6 @@ classes:
    - wide
 ---
 
-***NOTE: Tab-Icon ist noch von pandapower.***
 
 ## Installing pandapower
 
@@ -19,7 +18,6 @@ For the installation of pandapipes it is necessary to install pandapower first. 
 
 
 <h2 id="install">Installing pandapipes</h2>
-***NOTE: Nur pandapower zu pandapipes geändert.***
         
 <h3 id="pip">Through pip</h3>
 
@@ -39,7 +37,7 @@ If you don't have internet access on your system or don't want to use pip for so
 2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the setup.py file with the command cd
     \<folder\> :
 
-        cd %path_to_pandapower%\pandapower-x.x.x\
+        cd %path_to_pandapipes%\pandapipes-x.x.x\
 
 3.  Install pandapipes by running :
 
@@ -47,7 +45,7 @@ If you don't have internet access on your system or don't want to use pip for so
 
 <h3 id="develop">Development Version</h3>
 
-To install the latest development version of pandapipes from [github](https://github.com/e2nIEE/pandapower), simply follow these steps:
+To install the latest development version of pandapipes from [github](https://github.com/e2nIEE/pandapipes), simply follow these steps:
 
 1. Download and install [git](https://git-scm.com). 
 
@@ -55,7 +53,7 @@ To install the latest development version of pandapipes from [github](https://gi
 
 3. Run the following git command:
 
-        git clone https://github.com/e2nIEE/pandapower.git
+        git clone https://github.com/e2nIEE/pandapipes.git
 
 4. Navigate inside the repository and check out the develop branch:
 
@@ -72,13 +70,15 @@ To install the latest development version of pandapipes from [github](https://gi
 
 A first basic way to test your installation is to import all pandapower submodules to see if all dependencies are available:
 
-    import pandapower
-    import pandapower.networks
-    import pandapower.topology
-    import pandapower.plotting
-    import pandapower.converter
-    import pandapower.estimation
-
+    import pandapipes
+    import pandapipes.plotting
+    import pandapipes.timeseries
+    import pandapipes.networks
+    import pandapipes.io
+    import pandapipes.control
+    import pandapipes.component_models
+    
+   
 If you want to be really sure that everything works fine, run the pandapower test suite:
 
 1.  Install pytest if it is not yet installed on your system:
@@ -87,8 +87,8 @@ If you want to be really sure that everything works fine, run the pandapower tes
 
 2. Run the pandapower test suite:
 
-        import pandapower.test
-        pandapower.test.run_all_tests()
+        import pandapipes.test
+        pandapipes.test.run_tests()
 
 If everything is installed correctly, all tests should pass or xfail (expected to fail).
 
@@ -141,33 +141,20 @@ The pandapipes representation now looks like this:
 ![image](/images/getting_started/pandapipes_results2.png)
 
 
-### Running a Power Flow
+### Running a Pipe Flow
 
-A powerflow can be carried out with the [runpp function][]: 
+A pipeflow can be carried out with the [pipeflow function][]: 
 
-    pp.runpp(net)
+    pp.pipeflow(net)
 
-When a power flow is run, pandapower combines the information of all
-element tables into one pypower case file and uses pypower to run the
-power flow. The results are then processed and written back into
-pandapower:
+When a pipeflow is run, pandapipes combines the information of all
+element tables and calculates the current state of the network. Afterwards, results are written into the
+result tables.
 
-![image](http://pandapower.readthedocs.io/en/latest/_images/pandapower_powerflow.png)
-
-For the 3-bus example network, the result tables look like this:
-
-![image](/images/getting_started/pandapower_results.png)
-
-All other pandapower elements and network analysis functionality (e.g.
-optimal power flow, state estimation or short-circuit calculation) is
-also fully integrated into the tabular pandapower datastructure.
 
 This minimal example is also available as a [jupyter notebook].
 
-  [transformer model]: http://pandapower.readthedocs.io/en/latest/elements/trafo.html#electric-model
-  [standard type library]: http://pandapower.readthedocs.io/en/latest/std_types.html
-  [runpp function]: http://pandapower.readthedocs.io/en/latest/powerflow/ac.html
-  [jupyter notebook]: https://github.com/e2nIEE/pandapower/blob/develop/tutorials/minimal_example.ipynb
+  [jupyter notebook]: https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Minimal%20Example.ipynb
 
 
   
@@ -177,18 +164,13 @@ There are jupyter notebook tutorials on different functionalities of pandapower:
 
 Basic introduction:
 
-   -   [Minimal example](https://github.com/panda-power/pandapower/blob/master/tutorials/minimal_example.ipynb)
-   -   [Creating a simple network](https://github.com/panda-power/pandapower/blob/master/tutorials/create_simple.ipynb)
-   -   [Running a power flow](https://github.com/panda-power/pandapower/blob/master/tutorials/powerflow.ipynb)
-   -   [Creating an advanced network](https://github.com/panda-power/pandapower/blob/master/tutorials/create_advanced.ipynb)
-   -   [Working with the pandapower standard type library](https://github.com/panda-power/pandapower/blob/master/tutorials/std_types.ipynb)
-   -   [Application example: calculate hosting capacity with pandapower](https://github.com/e2nIEE/pandapower/blob/develop/tutorials/hosting_capacity.ipynb)
+   -   [Minimal example](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Minimal%20Example.ipynb)
+   -   [Creating a simple network](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Creating%20a%20simple%20network.ipynb)
+   -   [Simple Plotting](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Simple%20Plot.ipynb)
+  
+ 
+ More turorials will be added soon.
 
-Data analysis and modelling error diagnostic:
-
-   -   [Analysing data in pandapower tables](https://github.com/panda-power/pandapower/blob/master/tutorials/data_analysis.ipynb)
-   -   [Diagnosing inconsistent or incorrect data](https://github.com/panda-power/pandapower/blob/master/tutorials/diagnostic.ipynb)
-   -   [About the internal data structure of pandapower](https://github.com/panda-power/pandapower/blob/master/tutorials/internal_datastructure.ipynb)
 
 
 

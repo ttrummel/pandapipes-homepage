@@ -11,16 +11,16 @@ header:
   subtitle: <a href='https://pypi.python.org/pypi/pandapower'> <img src='{{"/images/home/shield_python_versions.svg" | relative_url}}'></a>
   
 shields:
-  - icon: 'https://badge.fury.io/py/pandapower.svg'
-    url: https://pypi.python.org/pypi/pandapower
+  - icon: 'https://badge.fury.io/py/pandapipes.svg'
+    url: https://pypi.python.org/pypi/pandapipes
   - icon: 'images/home/shield_python_versions.svg'
-    url: https://pypi.python.org/pypi/pandapower
+    url: https://pypi.python.org/pypi/pandapipes
   - icon: https://readthedocs.org/projects/pandapower/badge/
-    url: http://pandapower.readthedocs.io/
-  - icon: 'https://codecov.io/github/e2nIEE/pandapower/coverage.svg?branch=develop'
-    url: https://codecov.io/github/e2nIEE/pandapower?branch=master
+    url: http://pandapipes.readthedocs.io/
+  - icon: 'https://codecov.io/github/e2nIEE/pandapipes/coverage.svg?branch=develop'
+    url: https://codecov.io/github/e2nIEE/pandapipes?branch=master
   - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
-    url: 'https://app.codacy.com/project/lthurner/pandapower/dashboard'
+    url: 'https://app.codacy.com/project/lthurner/pandapipes/dashboard'
   - icon: 'images/home/shield_bsd.svg'
     url: https://github.com/e2nIEE/pandapower/blob/master/LICENSE
     
@@ -54,24 +54,26 @@ To get started with pandapipes, just
 
 2. Create a simple network
 
-        import pandapipes as ppipe
-        net = pp.create_empty_network() 
-        b1 = pp.create_bus(net, vn_kv=20.)
-        b2 = pp.create_bus(net, vn_kv=20.)
-        pp.create_line(net, from_bus=b1, to_bus=b2, length_km=2.5, std_type="NAYY 4x50 SE")   
-        pp.create_ext_grid(net, bus=b1)
-        pp.create_load(net, bus=b2, p_mw=1.)
+        import pandapipes as pp
+        net = pp.create_empty_network(fluid="lgas") 
+        j1 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 1")
+        j2 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 2")    
+        j3 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 3") 
+        ext_grid = pp.create_ext_grid(net, junction=j1, p_bar=1.1, t_k=293.15, name="Grid Connection")
+        sink = pp.create_sink(net, junction=j3, mdot_kg_per_s=0.045, name="Sink")
+        pipe = pp.create_pipe(net, from_junction=j1, to_junction=j2, length_km=0.1, diameter_m=0.05, name="Pipe 1")
+        valve = pp.create_valve(net, from_junction=j2, to_junction=j3, diameter_m=0.05, opened=True, name="Valve 1")
         
-3. Run a power flow:
+3. Run a pipe flow:
 
-        pp.runpp(net)
+        pp.pipeflow(net)
         
 4. And check the results:
 
-        print(net.res_bus.vm_pu)
-        print(net.res_line.loading_percent)
+        print(net.res_junction)
+        print(net.res_pipe)
 
-But of course pandapower can do much more than that - find out what on this page!
+But of course pandapipes can do much more than that - find out what on this page!
 
 {% include feature_row id="intro" type="center" %}
     

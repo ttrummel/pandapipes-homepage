@@ -94,16 +94,10 @@ summarizes some properties of commercial and open source tools, respectively.
 This is of course a very broad classification of tools that is only supposed to illustrate the focus of pandapipes without
 considering the diverse landscape of existing tools. 
 
-TOBEREMOVED
-A more detailed analysis of existing open source tools and 
-the gap that pandapower closes can be found in <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a>.
-Overviews over existing open source tools can also be found in <a href="https://doi.org/10.1016/j.esr.2017.12.002" title="S. Pfenninger, L. Hirth, I. Schlecht et. al - Opening the black box of energy modelling: Strategies and lessons learned, Energy Strategy Reviews, Volume 19, Pages 63-71, 2018">[2]</a>
- or <a href="https://doi.org/10.1109/PES.2009.5275920" title="F. Milano, L. Vanfretti - State of the Art and Future of OSS for Power Systems, 2009 IEEE Power & Energy Society General Meeting, Calgary, AB, 2009">[3]</a>
-END.
 
 **Scope**<br>
 
-pandapipes is aimed at **static** analysis of **balanced** power systems. This allows analysis of:
+pandapipes is aimed at **static** analysis of **balanced** fluid systems. This allows analysis of:
 - **Static** or **quasi-static** analyses of pressure and velocity distributions in fluid networks using incompressible or compressible media. Gas composition is assumed fix.
 -  **Static** or **quasi-static** analyses of temperature distributions in fluid networks. At present, this kind of analysis is only possible for incompressible media.
 
@@ -137,7 +131,7 @@ pandapipes supports the following fluid systems analysis functions:
 <h3 id="pf">Pipe Flow</h3>
 
 The pandapipes pipe flow solver is based on the Newton-Raphson method.
-<br><small>[Learn more](http://pandapower.readthedocs.io/en/stable/powerflow/ac.html)</small>
+<br><small>[Learn more](https://pandapipes.readthedocs.io/en/latest/pipeflow.html)</small>
 
 <font size="4"><b>Initialization</b></font>
 
@@ -146,21 +140,12 @@ vector for the pipe flow calculation:
    - flat start
    - Solution vector of a previous calculation
    
-<font size="4"><b>Performance</b></font>
-
-The performance of pandapipes was compared to the commercially available software Stanet. Stanet is capable of calculating
-electric, gas and district heating grids but is not focused on sector coupling.......More info added later
-
-
-<img src="{{"/images/about/speed_comparison.png" | relative_url }}" alt=""/>
-<figcaption>Power flow speed convergence time comparison of different open source tools <a href="https://doi.org/10.1109/TPWRS.2018.2829021" title="L. Thurner, A. Scheidler, F. Schäfer et al, pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems, IEEE Transactions on Power Systems, 2018.">[1]</a></figcaption>
-
 
 <h2 id="tests">Tests and Validation</h2>
 
 <font size="5"><b>STANET Tests</b></font>
 <br>
-So far pandapipes has been successfully tested 66 times with [pytest](https://docs.pytest.org/en/latest/).
+So far pandapipes has been successfully tested with [pytest](https://docs.pytest.org/en/latest/).
 Several factors within the test networks were varied:
 
  <ul>
