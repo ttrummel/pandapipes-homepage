@@ -23,6 +23,8 @@ shields:
     url: 'https://app.codacy.com/project/lthurner/pandapipes/dashboard'
   - icon: 'images/home/shield_bsd.svg'
     url: https://github.com/e2nIEE/pandapower/blob/master/LICENSE
+  - icon: 'https://mybinder.org/badge_logo.svg'
+    url: https://mybinder.org/v2/gh/e2nIEE/pandapower/master
     
 excerpt: An easy to use open source tool for fluid system modeling, analysis and optimization with a high degree of automation.
 feature_row:
