@@ -1,0 +1,11 @@
+main:
+  - title: "Getting Started"
+    url: /start/
+  - title: "About pandapipes"
+    url: /about/
+  - title: "Documentation"
+    url: https://pandapipes.readthedocs.io/en/latest/
+  - title: "References"
+    url: /references/
+  - title: "Contact"
+    url: /contact/
