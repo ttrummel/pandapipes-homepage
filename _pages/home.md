@@ -26,7 +26,7 @@ shields:
     
 excerpt: An easy to use open source tool for fluid system modeling, analysis and optimization with a high degree of automation.
 feature_row:
-  - image_path: /images/home/fluid_modeling.png
+  - image_path: /images/home/fluid_modeling.PNG
     title: "Fluid Modeling"
     excerpt: "Includes thoroughly validated models for pipes, pumps, valves and more."
     url: "about/#modeling"
