@@ -73,7 +73,7 @@ And these are some of the people behind pandapipes:
 ### Adress
 
 Fraunhofer Institute for Energy Economics and Energy System Technology IEE<br>
-Grid Planning and Grid Operation Department<br>
+Grid Planning and Grid Operation Division<br>
 Prof. Dr.-Ing. Martin Braun<br>
 Koenigstor 59<br>
 34119 Kassel<br>
