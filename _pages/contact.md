@@ -72,11 +72,11 @@ And these are some of the people behind pandapipes:
 
 ### Adress
 
-Fraunhofer Institute for Energy Economics and Energy System Technology IEE
-Grid Planning and Grid Operation Department
-Prof. Dr.-Ing. Martin Braun
-Koenigstor 59
-34119 Kassel
+Fraunhofer Institute for Energy Economics and Energy System Technology IEE<br>
+Grid Planning and Grid Operation Department<br>
+Prof. Dr.-Ing. Martin Braun<br>
+Koenigstor 59<br>
+34119 Kassel<br>
 
 ### Copyright und Liability 
 
