@@ -42,11 +42,12 @@ If you want to receive updates about new versions and other news about pandapipe
 
 ## About us
 
-pandapipes is a joint development of the research group Energy Management and Power System Operation, University of Kassel and the Department for Distribution System Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
+pandapipes is a development by the Division for Grid Planning and Grid Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel with support by the research group Energy Management and Power System Operation, University of Kassel.
 
-[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
+
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
- 
+[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
+
 
 ## Who we are
 
@@ -71,14 +72,12 @@ And these are some of the people behind pandapipes:
 
 ### Adress
 
-University of Kassel<br>
-FB 16 - Electrical Engineering and Computer Science<br>
-Department e²n<br>
-Prof. Dr.-Ing. Martin Braun<br>
-Wilhelmshöher Allee 73<br>
-34121 Kassel 
+Fraunhofer Institute for Energy Economics and Energy System Technology IEE
+Grid Planning and Grid Operation Department
+Prof. Dr.-Ing. Martin Braun
+Koenigstor 59
+34119 Kassel
 
 ### Copyright und Liability 
 
 The layout of the homepage, the graphics it contains, as well as the collection of documents are protected by copyright. Reproduction of these pages is authorized exclusively for personal use, no alterations are permitted, and any reproduced material may not be disseminated or displayed in public. All individual documents are likewise protected by copyright. All information on this server is provided without guarantee as to its accuracy. Under no circumstances will liability be assumed for loss or damage sustained through use of the information provided. Despite thorough control we do not take liability upon the content and correctness of external links. The operators respectively the authors are solely responsible for the linked web sides and publications. 
-
