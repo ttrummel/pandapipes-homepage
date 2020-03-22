@@ -21,6 +21,11 @@ developers:
     email: simon.ruben.drauz@iee.fraunhofer.de
     image: "/images/contact/Drauz.png"
     text: 
+  - name: "Jolando Kisse"
+    nickname: Jolando
+    email: jolando.kisse@uni-kassel.de
+    image: "/images/contact/Kisse.png"
+    text: 
   - name: "Tanja Kneiske"
     nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
@@ -42,11 +47,10 @@ If you want to receive updates about new versions and other news about pandapipe
 
 ## About us
 
-pandapipes is a development by the Division for Grid Planning and Grid Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel with support by the research group Energy Management and Power System Operation, University of Kassel.
+pandapipes is a development by the Division for Grid Planning and Grid Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
 
 
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
-[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
 
 
 ## Who we are
