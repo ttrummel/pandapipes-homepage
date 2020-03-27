@@ -138,7 +138,7 @@ The pandapipes representation now looks like this:
 
 
 
-![image](/images/getting_started/pandapipes_results2.PNG)
+![image](/images/getting_started/pandapipes_results2.png)
 
 
 ### Running a Pipe Flow
