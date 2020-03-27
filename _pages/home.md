@@ -19,8 +19,8 @@ shields:
     url: http://pandapipes.readthedocs.io/
   - icon: 'https://codecov.io/github/e2nIEE/pandapipes/coverage.svg?branch=develop'
     url: https://codecov.io/github/e2nIEE/pandapipes?branch=master
-  - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
-    url: 'https://app.codacy.com/project/lthurner/pandapipes/dashboard'
+  - icon: 'https://api.codacy.com/project/badge/Grade/86c876ab23fc40d98e85f7d59bdef928'
+    url: https://app.codacy.com/gh/e2nIEE/pandapipes/dashboard
   - icon: 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg'
     url: https://github.com/e2nIEE/pandapipes/blob/master/LICENSE
   - icon: 'https://mybinder.org/badge_logo.svg'
