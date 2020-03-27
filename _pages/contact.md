@@ -21,6 +21,11 @@ developers:
     email: simon.ruben.drauz@iee.fraunhofer.de
     image: "/images/contact/Drauz.png"
     text: 
+  - name: "Jolando Kisse"
+    nickname: Jolando
+    email: jolando.kisse@uni-kassel.de
+    image: "/images/contact/Kisse.png"
+    text: 
   - name: "Tanja Kneiske"
     nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
@@ -42,11 +47,11 @@ If you want to receive updates about new versions and other news about pandapipe
 
 ## About us
 
-pandapipes is a joint development of the research group Energy Management and Power System Operation, University of Kassel and the Department for Distribution System Operation at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
+pandapipes is a development by the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
 
-[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
+
 [<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
- 
+
 
 ## Who we are
 
@@ -71,14 +76,12 @@ And these are some of the people behind pandapipes:
 
 ### Adress
 
-University of Kassel<br>
-FB 16 - Electrical Engineering and Computer Science<br>
-Department e²n<br>
+Fraunhofer Institute for Energy Economics and Energy System Technology IEE<br>
+Grid Planning and Grid Operation Division<br>
 Prof. Dr.-Ing. Martin Braun<br>
-Wilhelmshöher Allee 73<br>
-34121 Kassel 
+Koenigstor 59<br>
+34119 Kassel<br>
 
 ### Copyright und Liability 
 
 The layout of the homepage, the graphics it contains, as well as the collection of documents are protected by copyright. Reproduction of these pages is authorized exclusively for personal use, no alterations are permitted, and any reproduced material may not be disseminated or displayed in public. All individual documents are likewise protected by copyright. All information on this server is provided without guarantee as to its accuracy. Under no circumstances will liability be assumed for loss or damage sustained through use of the information provided. Despite thorough control we do not take liability upon the content and correctness of external links. The operators respectively the authors are solely responsible for the linked web sides and publications. 
-

@@ -13,7 +13,7 @@ header:
 shields:
   - icon: 'https://badge.fury.io/py/pandapipes.svg'
     url: https://pypi.python.org/pypi/pandapipes
-  - icon: 'images/home/shield_python_versions.svg'
+  - icon: 'https://img.shields.io/pypi/pyversions/pandapipes.svg'
     url: https://pypi.python.org/pypi/pandapipes
   - icon: https://readthedocs.org/projects/pandapower/badge/
     url: http://pandapipes.readthedocs.io/
@@ -21,8 +21,10 @@ shields:
     url: https://codecov.io/github/e2nIEE/pandapipes?branch=master
   - icon: 'https://api.codacy.com/project/badge/Grade/5d749ed6772e47f6b84fb9afb83903d3'
     url: 'https://app.codacy.com/project/lthurner/pandapipes/dashboard'
-  - icon: 'images/home/shield_bsd.svg'
-    url: https://github.com/e2nIEE/pandapower/blob/master/LICENSE
+  - icon: 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg'
+    url: https://github.com/e2nIEE/pandapipes/blob/master/LICENSE
+  - icon: 'https://mybinder.org/badge_logo.svg'
+    url: https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop
     
 excerpt: An easy to use open source tool for fluid system modeling, analysis and optimization with a high degree of automation.
 feature_row:
