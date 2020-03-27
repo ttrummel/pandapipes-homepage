@@ -154,7 +154,7 @@ result tables.
 
 This minimal example is also available as a [jupyter notebook].
 
-  [jupyter notebook]: https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Minimal%20Example.ipynb
+  [jupyter notebook]: https://github.com/e2nIEE/pandapipes/blob/master/tutorials/minimal_example.ipynb
 
 
   
@@ -164,9 +164,9 @@ There are jupyter notebook tutorials on different functionalities of pandapower:
 
 Basic introduction:
 
-   -   [Minimal example](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Minimal%20Example.ipynb)
-   -   [Creating a simple network](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Creating%20a%20simple%20network.ipynb)
-   -   [Simple Plotting](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Simple%20Plot.ipynb)
+   -   [Minimal example](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/minimal_example.ipynb)
+   -   [Creating a simple network](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_simple_network.ipynb)
+   -   [Simple Plotting](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/simple_plot.ipynb)
   
  
  More turorials will be added soon.
