@@ -27,7 +27,7 @@ developers:
     image: "/images/contact/Kisse.png"
     text: 
   - name: "Tanja Kneiske"
-    nickname: Tanja
+    nickname: Tanja Kneiske
     email: tanja.kneiske@iee.fraunhofer.de
     image: "/images/contact/Kneiske.jpg"
     text: "was the initiator of the pandapipes project and brought the idea to life through her team. She is now the coordinator of the pandapipes development."
