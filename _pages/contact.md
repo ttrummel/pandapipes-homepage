@@ -29,13 +29,8 @@ developers:
   - name: "Tanja Kneiske"
     nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
-    image: "/images/contact/Kneiske.png"
-    text: 
-  - name: "Martin Braun"
-    nickname: Martin Braun
-    email: martin.braun@uni-kassel.de
-    image: "/images/contact/Braun.jpg"
-    text: "is strategically guiding and paving the way towards new fields of application."    
+    image: "/images/contact/Kneiske.jpg"
+    text: "was the initiator of the pandapipes project and brought the idea to life through her team. She is now the coordinator of the pandapipes development."
 ---
 <p></p>
 
