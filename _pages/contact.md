@@ -7,27 +7,38 @@ classes:
   - wide
 developers:
   - name: "Dennis Cronbach"
+    affiliation: "Fraunhofer IEE"
     nickname: Dennis
     email: dennis.cronbach@iee.fraunhofer.de
     image: "/images/contact/Cronbach.PNG"
-    text: 
+    text: "had to fight windmills to create the fundamentals of what pandapipes is today - against 
+           all odds. He loves transferring concepts from physics into software to unlock more and 
+           more features."
   - name: "Daniel Lohmeier"
+    affiliation: "Fraunhofer IEE"
     nickname: Daniel
     email: daniel.lohmeier@iee.fraunhofer.de
     image: "/images/contact/Lohmeier.jpg"
-    text: 
+    text: "is Mr. Speedy, as he put all his efforts into making pandapipes as performant in its 
+           calculation as it is today. He loves to be the first to write new and clean code."
   - name: "Simon Ruben Drauz"
+    affiliation: "Fraunhofer IEE"
     nickname: Simon
     email: simon.ruben.drauz@iee.fraunhofer.de
     image: "/images/contact/Drauz.png"
-    text: 
+    text: "can run until time is up. He is the expert of controllers and time series calculations 
+           and tries to convert all the concepts from pandapower to pandapipes."
   - name: "Jolando Kisse"
+    affiliation: "University of Kassel"
     nickname: Jolando
     email: jolando.kisse@uni-kassel.de
     image: "/images/contact/Kisse.png"
-    text: 
+    text: "will always find a cool answer to all your questions and will never give up on it. As our
+           newest core team member he caught up very fast and is now sitting in the drivers seat to 
+           push the pandapipes development."
   - name: "Tanja Kneiske"
-    nickname: Tanja Kneiske
+    affiliation: "Fraunhofer IEE"
+    nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
     image: "/images/contact/Kneiske.jpg"
     text: "was the initiator of the pandapipes project and brought the idea to life through her team. She is now the coordinator of the pandapipes development."
@@ -57,7 +68,7 @@ And these are some of the people behind pandapipes:
     <p>
     <img style="padding:2px 2px 2px 2px;  margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
-        <b>{{ developer.name }}</b> {{ developer.text }} <br>
+        <b>{{ developer.name }}</b> ({{ developer.affiliation }}) </b> {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
     </span>
     <BR CLEAR="left"/> 
