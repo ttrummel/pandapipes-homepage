@@ -68,7 +68,7 @@ And these are some of the people behind pandapipes:
     <p>
     <img style="padding:2px 2px 2px 2px;  margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
-        <b>{{ developer.name }}</b> ({{ developer.affiliation }}) </b> {{ developer.text }} <br>
+        <b>{{ developer.name }}</b> ({{ developer.affiliation }}) {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
     </span>
     <BR CLEAR="left"/> 
