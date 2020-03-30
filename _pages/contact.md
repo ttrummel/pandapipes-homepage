@@ -76,11 +76,11 @@ And these are some of the people behind pandapipes:
   {% endfor %}
 </div>
 
-[See Full List of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
+[See full list of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
 
 ## Impressum
 
-### Adress
+### Address
 
 Fraunhofer Institute for Energy Economics and Energy System Technology IEE<br>
 Grid Planning and Grid Operation Division<br>
