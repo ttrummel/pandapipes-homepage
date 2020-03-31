@@ -48,8 +48,15 @@ developers:
 ## Mailing List <a name="list"></a>
 If you want to receive updates about new versions and other news about pandapipes, you can subscribe to the pandapipes mailing list:
 
-[<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
+[<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapipes){: .btn .btn--success .btn--large}<br>
 <small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapipes">unsubscribe here</a>.</small>
+
+As pandapipes is highly dependent on pandapower we recommend you to always be up-to-date in terms of the pandapower releases.
+Therefore, if you want to receive updates also about new versions and other news about pandapower, you can also subscribe to the pandapower mailing list:
+
+[<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
+<small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
+
 
 ## About us
 
