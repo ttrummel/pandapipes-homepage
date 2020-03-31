@@ -25,7 +25,7 @@ developers:
     affiliation: "Fraunhofer IEE"
     nickname: Simon
     email: simon.ruben.drauz@iee.fraunhofer.de
-    image: "/images/contact/Drauz.png"
+    image: "/images/contact/Drauz.jpeg"
     text: "can run until time is up. He is the expert of controllers and time series calculations 
            and tries to convert all the concepts from pandapower to pandapipes."
   - name: "Jolando Kisse"
@@ -53,10 +53,12 @@ If you want to receive updates about new versions and other news about pandapipe
 
 ## About us
 
-pandapipes is a development by the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
+pandapipes is a development by the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel. Major contributions were made by the research group Energy Management and Power System Operation, University of Kassel.
 
 
-[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
+[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png" width="300">](https://www.iee.fraunhofer.de/en.html)
+
+[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png" width="200">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
 
 
 ## Who we are
