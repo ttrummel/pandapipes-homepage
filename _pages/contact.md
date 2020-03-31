@@ -80,7 +80,7 @@ And these are some of the people behind pandapipes:
 
 [See full list of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
 
-## Impressum
+## Impressum - Legal Notice
 
 ### Address
 
