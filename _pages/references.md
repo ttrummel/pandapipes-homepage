@@ -12,7 +12,7 @@ classes:
 
 ## Citing pandapipes <a name="citing"></a>
 
-Up to now, no papers describing pandapipes have been published.
+A paper, which can be used to cite pandapipes, will be published soon.
 
 ## Publications
 
