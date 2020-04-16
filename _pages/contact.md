@@ -7,50 +7,65 @@ classes:
   - wide
 developers:
   - name: "Dennis Cronbach"
+    affiliation: "Fraunhofer IEE"
     nickname: Dennis
     email: dennis.cronbach@iee.fraunhofer.de
     image: "/images/contact/Cronbach.PNG"
-    text: 
+    text: "had to fight windmills to create the fundamentals of what pandapipes is today - against 
+           all odds. He loves transferring concepts from physics into software to unlock more and 
+           more features."
   - name: "Daniel Lohmeier"
+    affiliation: "Fraunhofer IEE"
     nickname: Daniel
     email: daniel.lohmeier@iee.fraunhofer.de
     image: "/images/contact/Lohmeier.jpg"
-    text: 
+    text: "is Mr. Speedy, as he put all his efforts into making pandapipes as performant in its 
+           calculation as it is today. He loves to be the first to write new and clean code."
   - name: "Simon Ruben Drauz"
+    affiliation: "Fraunhofer IEE"
     nickname: Simon
     email: simon.ruben.drauz@iee.fraunhofer.de
-    image: "/images/contact/Drauz.png"
-    text: 
+    image: "/images/contact/Drauz.jpeg"
+    text: "can run until time is up. He is the expert of controllers and time series calculations 
+           and tries to convert all the concepts from pandapower to pandapipes."
   - name: "Jolando Kisse"
+    affiliation: "University of Kassel"
     nickname: Jolando
     email: jolando.kisse@uni-kassel.de
     image: "/images/contact/Kisse.png"
-    text: 
+    text: "will always find a cool answer to all your questions and will never give up on it. As our
+           newest core team member he caught up very fast and is now sitting in the drivers seat to 
+           push the pandapipes development."
   - name: "Tanja Kneiske"
+    affiliation: "Fraunhofer IEE"
     nickname: Tanja
     email: tanja.kneiske@iee.fraunhofer.de
-    image: "/images/contact/Kneiske.png"
-    text: 
-  - name: "Martin Braun"
-    nickname: Martin Braun
-    email: martin.braun@uni-kassel.de
-    image: "/images/contact/Braun.jpg"
-    text: "is strategically guiding and paving the way towards new fields of application."    
+    image: "/images/contact/Kneiske.jpg"
+    text: "was the initiator of the pandapipes project and brought the idea to life through her team. She is now the coordinator of the pandapipes development."
 ---
 <p></p>
 
 ## Mailing List <a name="list"></a>
 If you want to receive updates about new versions and other news about pandapipes, you can subscribe to the pandapipes mailing list:
 
-[<i class='fas fa-envelope'></i> Subscribe](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
+[<i class='fas fa-envelope'></i> Subscribe to pandapipes](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapipes){: .btn .btn--success .btn--large}<br>
 <small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapipes">unsubscribe here</a>.</small>
+
+As pandapipes is highly dependent on pandapower we recommend you to always be up-to-date in terms of the pandapower releases.
+Therefore, if you want to receive updates also about new versions and other news about pandapower, you can also subscribe to the pandapower mailing list:
+
+[<i class='fas fa-envelope'></i> Subscribe to pandapower](mailto:sympa@fraunhofer.de?subject=subscribe%20pandapower){: .btn .btn--success .btn--large}<br>
+<small>If you no longer want to receive updates, <a href="mailto:sympa@fraunhofer.de?subject=unsubscribe%20pandapower">unsubscribe here</a>.</small>
+
 
 ## About us
 
-pandapipes is a development by the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel.
+pandapipes is a development by the Grid Planning and Grid Operation Division at the Fraunhofer Institute for Energy Economics and Energy System Technology (IEE), Kassel. Major contributions were made by the research group Energy Management and Power System Operation, University of Kassel.
 
 
-[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png">](https://www.iee.fraunhofer.de/en.html)
+[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/iee.png" width="300">](https://www.iee.fraunhofer.de/en.html)
+
+[<img src="https://www.uni-kassel.de/eecs/fileadmin/datas/fb16/Fachgebiete/energiemanagement/e2n.png" width="200">](https://www.uni-kassel.de/eecs/en/fachgebiete/e2n/home.html)
 
 
 ## Who we are
@@ -62,7 +77,7 @@ And these are some of the people behind pandapipes:
     <p>
     <img style="padding:2px 2px 2px 2px;  margin-right: 15px" src="{{ developer.image | relative_url }}" width="120" align="left"/> 
     <span style="margin-top: -5px; display:inline-block; max-width:500px;">
-        <b>{{ developer.name }}</b> {{ developer.text }} <br>
+        <b>{{ developer.name }}</b> ({{ developer.affiliation }}) {{ developer.text }} <br>
         <a href="mailto:{{developer.email}}">Contact {{developer.nickname}}</a> 
     </span>
     <BR CLEAR="left"/> 
@@ -70,11 +85,11 @@ And these are some of the people behind pandapipes:
   {% endfor %}
 </div>
 
-[See Full List of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
+[See full list of authors and contributors](https://pandapipes.readthedocs.io/en/latest/about/authors.html){: .btn .btn--success .btn--large}
 
-## Impressum
+## Impressum - Legal Notice
 
-### Adress
+### Address
 
 Fraunhofer Institute for Energy Economics and Energy System Technology IEE<br>
 Grid Planning and Grid Operation Division<br>
