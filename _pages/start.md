@@ -131,7 +131,7 @@ The above network can be created in pandapipes as follows:
 
 The pandapipes representation now looks like this:
 
-![image](/images/getting_started/pandapipes_results1.PNG)
+![image](/images/getting_started/pandapipes_results1.png)
 
 
 
