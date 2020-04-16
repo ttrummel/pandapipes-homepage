@@ -16,9 +16,14 @@ Up to now, no papers describing pandapipes have been published.
 
 ## Publications
 
-### About pandaipes
+### About pandapipes
 
 The following publications discuss the tool itself and implementation details:
+
+- **D. Cronbach, T. M. Kneiske**, Development of a Simulation Environment For Analyzing Multi-Energy Networks, 14th International Conference on Heat Transfer, Fluid Mechanics and Thermodynamics, 2019.
+
+
+
 
 
 
