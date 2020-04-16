@@ -27,7 +27,7 @@ developers:
     email: simon.ruben.drauz@iee.fraunhofer.de
     image: "/images/contact/Drauz.jpeg"
     text: "can run until time is up. He is the expert of controllers and time series calculations 
-           and tries to convert all the concepts from pandapower to pandapipes."
+           and converts all the concepts from pandapower to pandapipes."
   - name: "Jolando Kisse"
     affiliation: "University of Kassel"
     nickname: Jolando
