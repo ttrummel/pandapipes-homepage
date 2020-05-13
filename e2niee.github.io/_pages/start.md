@@ -23,7 +23,7 @@ For the installation of pandapipes it is necessary to install pandapower first. 
 
 The easiest way to install pandapipes is through pip:
 
-1. Open a command prompt (e.g. start-->cmd on windows systems)
+1. Open a command prompt (e.g. start --> cmd on windows systems)
 
 2. Install pandapipes by running:
 
@@ -34,7 +34,7 @@ The easiest way to install pandapipes is through pip:
 If you don't have internet access on your system or don't want to use pip for some other reason, pandapipes can also be installed without using pip:
 
 1.  Download and unzip the current pandapipes distribution from [PyPi](https://pypi.org/project/pandapower/) under "Download files".
-2.  Open a command prompt (e.g. Start\--\>cmd on Windows) and navigate to the folder that contains the setup.py file with the command cd
+2.  Open a command prompt (e.g. start --> cmd on windows systems) and navigate to the folder that contains the setup.py file with the command cd
     \<folder\> :
 
         cd %path_to_pandapipes%\pandapipes-x.x.x\
@@ -103,8 +103,7 @@ junction, sink, etc.
 We consider the following simple example network as a minimal
 example:
 
-![](/images/getting_started/simple_network.png)
-
+<center><img src="{{"/images/getting_started/simple_network.png" | relative_url }}" alt="" /></center>
 
 ### Creating a network
 
@@ -112,38 +111,31 @@ The above network can be created in pandapipes as follows:
 
     import pandapipes as pp
     #create empty net
-    net = pp.create_empty_network() 
+    net = pp.create_empty_network(fluid="lgas")
 
     #create junctions
-    j1 = pp.create_junction(net, pn_bar=5, name="Junction 1")
-    j2 = pp.create_junction(net, pn_bar=5, name="Junction 2")
-    j3 = pp.create_junction(net, pn_bar=5, name="Junction 3")
+    j1 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 1")
+    j2 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 2")
+    j3 = pp.create_junction(net, pn_bar=1.05, tfluid_k=293.15, name="Junction 3")
 
     #create junction elements
-    pp.create_ext_grid(net, junction=j1, p_bar=5, name="Grid Connection")
-    pp.create_sink(net, junction=j3, mdot_kgps=50, name="Sink")
+    ext_grid = pp.create_ext_grid(net, junction=j1, p_bar=1.1, t_k=293.15, name="Grid Connection")
+    sink = pp.create_sink(net, junction=j3, mdot_kg_per_s=0.045, name="Sink")
 
     #create branch elements
-    pp.create_pipe(net, from_junction=j1, to_junction=j2, length_km=0.1, diameter_m=0.05, name="Pipe")
-    pp.create_valve_pipe(net, from_junction=j2, to_junction=j3, length_km=2, diameter_m=0.05)   
+    pipe = pp.create_pipe_from_parameters(net, from_junction=j1, to_junction=j2, length_km=0.1, diameter_m=0.05, name="Pipe")
+    valve = pp.create_valve(net, from_junction=j2, to_junction=j3, diameter_m=0.05, opened=True, name="Valve")
 
 
 
 The pandapipes representation now looks like this:
 
-![image](/images/getting_started/pandapipes_results1.png)
-
-
-
-
-
-
-![image](/images/getting_started/pandapipes_results2.png)
+<img src="{{"/images/getting_started/pandapipes_results.png" | relative_url }}" alt="" />
 
 
 ### Running a Pipe Flow
 
-A pipeflow can be carried out with the [pipeflow function][]: 
+A pipeflow can be carried out with the [pipeflow function](https://pandapipes.readthedocs.io/en/latest/pipeflow/run.html):
 
     pp.pipeflow(net)
 
