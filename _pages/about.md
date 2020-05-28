@@ -15,6 +15,9 @@ gallery:
   - url:        /images/about/validation/delta.png
     image_path: /images/about/validation/delta.png
     title:      "delta"
+  - url:        /images/about/validation/delta_2sinks.png
+    image_path: /images/about/validation/delta_2sinks.png
+    title:      "delta with 2 sinks"
   - url:        /images/about/validation/district.png
     image_path: /images/about/validation/district.png
     title:      "district"
@@ -23,7 +26,40 @@ gallery:
     title:      "H-net"
   - url:        /images/about/validation/one_pipe.png
     image_path: /images/about/validation/one_pipe.png
-    title:      "one_pipe"
+    title:      "one pipe"
+  - url:        /images/about/validation/heat_case_delta.png
+    image_path: /images/about/validation/heat_case_delta.png
+    title:      "heat case delta"
+  - url:        /images/about/validation/heat_case_heights.png
+    image_path: /images/about/validation/heat_case_heights.png
+    title:      "heat case heights"
+  - url:        /images/about/validation/heat_case_t_cross.png
+    image_path: /images/about/validation/heat_case_t_cross.png
+    title:      "heat case t-cross"
+  - url:        /images/about/validation/heat_case_two_pipes.png
+    image_path: /images/about/validation/heat_case_two_pipes.png
+    title:      "heat case two pipes"
+  - url:        /images/about/validation/heights.png
+    image_path: /images/about/validation/heights.png
+    title:      "heights"
+  - url:        /images/about/validation/mixed_net.png
+    image_path: /images/about/validation/mixed_net.png
+    title:      "mixed net"
+  - url:        /images/about/validation/one_source.png
+    image_path: /images/about/validation/one_source.png
+    title:      "one source"
+  - url:        /images/about/validation/pump.png
+    image_path: /images/about/validation/pump.png
+    title:      "one pump"
+  - url:        /images/about/validation/section_variation.png
+    image_path: /images/about/validation/section_variation.png
+    title:      "variation of pipe-sections"
+  - url:        /images/about/validation/two_pumps.png
+    image_path: /images/about/validation/two_pumps.png
+    title:      "two pumps"
+  - url:        /images/about/validation/valves.png
+    image_path: /images/about/validation/valves.png
+    title:      "valves"
   - url:        /images/about/validation/parallel.png
     image_path: /images/about/validation/parallel.png
     title:      "parallel"
@@ -35,31 +71,31 @@ gallery:
     title:      "square"
   - url:        /images/about/validation/strand_net.png
     image_path: /images/about/validation/strand_net.png
-    title:      "strand_net"
+    title:      "strand net"
   - url:        /images/about/validation/strand_net_stanet.png
     image_path: /images/about/validation/strand_net_stanet.png
-    title:      "strand_net_stanet"
+    title:      "strand net of STANET"
   - url:        /images/about/validation/t-cross_1.png
     image_path: /images/about/validation/t-cross_1.png
-    title:      "t-cross_1"
+    title:      "t-cross 1"
   - url:        /images/about/validation/t-cross_2.png
     image_path: /images/about/validation/t-cross_2.png
-    title:      "t-cross_2"
+    title:      "t-cross 2"
   - url:        /images/about/validation/two_pipes.png
     image_path: /images/about/validation/two_pipes.png
-    title:      "two_pipes"
+    title:      "two pipes"
   - url:        /images/about/validation/two_pipes_two_ext_grid.png
     image_path: /images/about/validation/two_pipes_two_ext_grid.png
-    title:      "two_pipes_two_ext_grid"
+    title:      "two pipes with two external grids"
   - url:        /images/about/validation/two_valves.png
     image_path: /images/about/validation/two_valves.png
-    title:      "two_valves"
-  - url:        /images/about/validation/versatility_1.png
-    image_path: /images/about/validation/versatility_1.png
-    title:      "versatility_1"
-  - url:        /images/about/validation/versatility_2.png
-    image_path: /images/about/validation/versatility_2.png
-    title:      "versatility_2"
+    title:      "two valves"
+  - url:        /images/about/validation/versatility_gas.png
+    image_path: /images/about/validation/versatility_gas.png
+    title:      "versatility gas"
+  - url:        /images/about/validation/versatility_water.png
+    image_path: /images/about/validation/versatility_water.png
+    title:      "versatility water"
 ---
 
 pandapipes is an easy to use network calculation program aimed at automation of analysis of district heating
@@ -132,21 +168,20 @@ pandapipes supports the following fluid systems analysis functions:
 
 The pandapipes pipe flow solver is based on the Newton-Raphson method.
 <br><small>[Learn more](https://pandapipes.readthedocs.io/en/latest/pipeflow.html)</small>
-
-<font size="4"><b>Initialization</b></font>
-
-pandapipes offers two different methods to initialize the solution
-vector for the pipe flow calculation:
-   - flat start
-   - Solution vector of a previous calculation
-   
+<br>
+To initialize the solution vector for the pipe flow calculation pandapipes offers two different methods:
+ <ul>
+ <small>
+  <li>flat start</li>
+  <li>solution vector of a previous calculation</li>
+  </small>
+ </ul>
 
 <h2 id="tests">Tests and Validation</h2>
 
-<font size="5"><b>STANET Tests</b></font>
-<br>
 So far pandapipes has been successfully tested with [pytest](https://docs.pytest.org/en/latest/).
-Several factors within the test networks were varied:
+To ensure the correctness of the functionalities in pandapipes, various test networks were created,
+in which different factors were varied:
 
  <ul>
  <small>
@@ -160,19 +195,33 @@ Several factors within the test networks were varied:
   <li>number and height values of nodes</li>
   <li>direction of pipe link between nodes, for checking the correct flow velocity calculation</li>
   <li>combinations of sources, sinks, pumps, valves and external grids</li>
+  <li>heat network calculation (only with OpenModelica)</li>
   </small>
  </ul>
+
 <br>
-The test nets were created with STANET and saved in CSV format so that a conversion
-into a json file can take place to perform the tests in [PyCharm](https://www.jetbrains.com/pycharm/).
+The test networks were created in [STANET](http://www.stafu.de/de/home.html) and
+[OpenModelica](https://www.openmodelica.org/) and transformed into a
+pandapipes network using the respective converter to perform the tests
+in [PyCharm](https://www.jetbrains.com/pycharm/). A total of 83 tests were created
+using both programs. 22 water and 21 gas networks with STANET and 32 water and 8 heating
+networks with OpenModelica. How to call up the individual example networks is described in
+the [Networks](https://pandapipes.readthedocs.io/en/latest/networks.html) chapter of the documentation.
 The structures of all test networks are listed below:
 
 {% include gallery caption="The pandapipes test networks." %}
 
 <img src="{{"/images/about/validation/legend.png" | relative_url }}" alt=""/>
 <figcaption>Legend of the network components.</figcaption>
-<br>
-The relative error <math><mi>p<sub>diff</sub></mi></math> during the calculation of the pressures always has a value less than 0.01.
+
+
+<h3 id="tests">STANET Tests</h3>
+
+The STANET test nets were saved in CSV format so that a conversion
+into a json file can take place. A test is considered passed, if certain error tolerances are met.
+The relative error <math><mi>p<sub>diff</sub></mi></math> during the calculation of the pressures
+mostly has a value less than 0.002. In two cases the limit has to be increased, once to 0.01
+and the second time to 0.03.
 
 <math>
     <mrow>
@@ -189,9 +238,9 @@ The relative error <math><mi>p<sub>diff</sub></mi></math> during the calculation
         <mo>|</mo>
     </mrow>
 </math>
-
 <br>
-Furthermore, the absolute error in the calculation of the flow velocities <math><mi>v<sub>diff,abs</sub></mi></math> is always less than 0.05.
+Furthermore, the absolute error in the calculation of the flow velocities <math><mi>v<sub>diff,abs</sub></mi></math>
+is always less than 0.03.
 
 <math>
     <mrow>
@@ -205,22 +254,124 @@ Furthermore, the absolute error in the calculation of the flow velocities <math>
     </mrow>
 </math>
 
-<!--
-| **Parameter**     | **Max. Deviation**  | 
-|-------------------|---------------------| 
-| Voltage Magnitude | 0.000001 pu         | 
-| Voltage Angle     | 0.01°               | 
-| Current           | 0.000001 kA         | 
-| Power             | 0.005 kW            | 
-| Element Loading   | 0.001%              | 
--->
 
+<h3 id="tests">OpenModelica Tests</h3>
 
+Using the mo- and a mat-file containing the simulation results, the OpenModelica
+net will be converted into a pandapipes network.
+OpenModelica uses the [Navier-Stokes equations](https://www.maplesoft.com/documentation_center/online_manuals/modelica/Modelica_Fluid_UsersGuide_ComponentDefinition.html#Modelica.Fluid.UsersGuide.ComponentDefinition.BalanceEquations)
+to calculate pressure loss and flow velocities. Whereas pandapipes uses an approach similar to STANET.
+Consequently, the tolerances for errors for passing a test should be increased.
+For the relative error <math><mi>p<sub>diff</sub></mi></math> with respect to pressure, a limit of 0.01
+is usually sufficient. In 3 cases the limit should be increased to 0.02 and
+in 2 cases to 0.06 and 0.4 respectively.
+Presumably, the deviations are caused by the complexity of the networks, in which pumps and
+valves are usually found. However, it is not generally due to the use of pumps and valves,
+since test networks with pumps and valves that maintain a fault tolerance of 0.01 also exist.
+In addition, the limit for the relative pressure deviation for heating networks lies in a
+range between 0.01 and 0.05.
+
+<math>
+    <mrow>
+        <mi>p<sub>diff</sub></mi>
+        <mo>=</mo>
+        <mo>|</mo>
+            <mo>(</mo>
+                <mi>p<sub>modelica</sub></mi>
+                <mo>-</mo>
+                <mi>p<sub>pandapipes</sub></mi>
+            <mo>)</mo>
+            <mo>/</mo>
+            <mi>p<sub>modelica</sub></mi>
+        <mo>|</mo>
+    </mrow>
+</math>
+<br>
+Furthermore, the absolute error for the flow velocities <math><mi>v<sub>diff,abs</sub></mi></math>
+is always below 0.05.
+
+<math>
+    <mrow>
+        <mi>v<sub>diff,abs</sub></mi>
+        <mo>=</mo>
+        <mo>|</mo>
+        <mi>v<sub>modelica</sub></mi>
+        <mo>-</mo>
+        <mi>v<sub>pandapipes</sub></mi>
+        <mo>|</mo>
+    </mrow>
+</math>
+<br>
+For the thermal network calculation, the upper tolerance value for the relative error of
+the mean temperatures <math><mi>T<sub>diff,mean</sub></mi></math> is in a range from 0.004 to 0.04.
+
+<math>
+    <mrow>
+        <mi>T<sub>diff,mean</sub></mi>
+        <mo>=</mo>
+        <mo>|</mo>
+            <mo>(</mo>
+                <mi>T<sub>mean,modelica</sub></mi>
+                <mo>-</mo>
+                <mi>T<sub>mean,pandapipes</sub></mi>
+            <mo>)</mo>
+            <mo>/</mo>
+            <mi>T<sub>mean,modelica</sub></mi>
+        <mo>|</mo>
+    </mrow>
+</math>
+<br>
+In order to create your own nets in OpenModelica and to perform a comparison with pandapipes,
+the elements that serve as equivalents for the components in pandapipes are listed hereafter:
+
+<img src="{{"/images/about/validation/component_definition.png" | relative_url }}" alt=""/>
+
+<br>
+In the case of heat network calculation, the DynamicPipe must be used instead of the StaticPipe:
+
+<img src="{{"/images/about/validation/DynamicPipe.png" | relative_url }}" alt=""/>
+
+<h3 id="tests"><i>Example</i></h3>
+
+In the following section an example is presented in which all the above mentioned components
+except the DynamicPipe appear. The components have the below parameters:
+<br>
+
+| Component                 | Parameter                                                                          |
+|---------------------------|------------------------------------------------------------------------------------|
+| External Grid (ext_grid1) | p = 5 bar                                                                          |
+| Sink (sink1)              | m_flow = -1 kg/s                                                                   |
+| Source (source1)          | m_flow = 3 kg/s                                                                    |
+| Junction (junction1)      | m_flow = 0 kg/s                                                                    |
+| Pipe (pipe1)              | length = 1km <br> diameter = 0.075 m <br> roughness = 2 mm <br> height_ab = -400 m |
+| Valve (valve1)            | A ~= 0,031416 m^2                                                                  |
+| Constant (const_v1)       | k = 1 (valve opened)                                                               |
+| Pump (pump1)              | pump characteristic curve P1 in pandapipes                                         |
+
+<br>
+The medium is water with a temperature of 293.15 K, where the ambient temperature has the same value.
+The fluid properties can be called using special methods in OpenModelica,
+for this purpose the source code must be considered.
+
+<center><img src="{{"/images/about/validation/example_graph.png" | relative_url }}" alt="" /></center>
+
+<img src="{{"/images/about/validation/example_code.png" | relative_url }}" alt=""/>
+
+<br>
+The results of the calculations are shown in the following. The results for junction1
+and sink1 are highlighted in color. Also the deviations of the comparison are listed further down.
+
+<img src="{{"/images/about/validation/example_result_OM.png" | relative_url }}" alt=""/>
+<figcaption>Results of OpenModelica calculations with Prandtl-Colebrook.</figcaption>
+
+<br>
+
+<img src="{{"/images/about/validation/example_result_pp.png" | relative_url }}" alt=""/>
+<figcaption>Results of the pandapipes calculations with Prandtl-Colebrook and the results of the comparison with the OpenModelica simulation.</figcaption>
 
 <h2 id="citing">Citing pandpipes</h2>
 
 If you use pandapipes in your work, we kindly ask you to cite the [pandapipes reference paper](/references/#citing)
-
 
 <h2 id="license">License</h2>
 
@@ -233,7 +384,7 @@ All rights reserved.
     provided that the following conditions are met:   
 
 
- > 1. Redistributions of source code must retain the above copyright notice, this list of conditions
+> 1. Redistributions of source code must retain the above copyright notice, this list of conditions
     and the following disclaimer.
 
 > 2. Redistributions in binary form must reproduce the above copyright notice, this list of
