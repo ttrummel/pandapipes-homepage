@@ -24,7 +24,7 @@ shields:
   - icon: 'https://img.shields.io/badge/License-BSD%203--Clause-blue.svg'
     url: https://github.com/e2nIEE/pandapipes/blob/master/LICENSE
   - icon: 'https://mybinder.org/badge_logo.svg'
-    url: https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop
+    url: https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials
     
 excerpt: An easy to use open source tool for fluid system modeling, analysis and optimization with a high degree of automation.
 feature_row:
