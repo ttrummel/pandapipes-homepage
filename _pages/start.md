@@ -152,16 +152,19 @@ This minimal example is also available as a [jupyter notebook].
   
 ## Interactive Tutorials <a name="tutorials"></a>
 
-There are jupyter notebook tutorials on different functionalities of pandapower:
+There are jupyter notebook tutorials on different functionalities of pandapipes. They can be viewed as static
+tutorials on github or as interactive tutorials via Binder. Interactive tutorials take a moment to load.
 
 Basic introduction:
 
-   -   [Minimal example](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Minimal%20Example.ipynb)
-   -   [Creating a simple network](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Creating%20a%20simple%20network.ipynb)
-   -   [Simple Plotting](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/Simple%20Plot.ipynb)
-  
- 
- More turorials will be added soon.
+   -   Minimal example hydraulic calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/minimal_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/minimal_example.ipynb))
+   -   Creating a simple gas or water network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_simple_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/creating_a_simple_network.ipynb))
+   -   Minimal example temperature calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/heating_network_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/heating_network_example.ipynb))
+   -   Creating a simple heating network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_heating_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/creating_a_heating_network.ipynb))
+   -   Introduction to Plotting ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/simple_plot.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/simple_plot.ipynb))
+
+
+ More tutorials will be added soon.
 
 
 
