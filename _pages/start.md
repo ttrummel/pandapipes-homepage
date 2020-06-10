@@ -157,11 +157,11 @@ tutorials on github or as interactive tutorials via Binder. Interactive tutorial
 
 Basic introduction:
 
-   -   Minimal example hydraulic calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/minimal_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/minimal_example.ipynb))
-   -   Creating a simple gas or water network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_simple_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/creating_a_simple_network.ipynb))
-   -   Minimal example temperature calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/heating_network_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/heating_network_example.ipynb))
-   -   Creating a simple heating network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_heating_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/creating_a_heating_network.ipynb))
-   -   Introduction to Plotting ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/simple_plot.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/develop?filepath=tutorials/simple_plot.ipynb))
+   -   Minimal example hydraulic calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/minimal_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials/minimal_example.ipynb))
+   -   Creating a simple gas or water network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_simple_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials/creating_a_simple_network.ipynb))
+   -   Minimal example temperature calculation ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/heating_network_example.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials/heating_network_example.ipynb))
+   -   Creating a simple heating network ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/creating_a_heating_network.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials/creating_a_heating_network.ipynb))
+   -   Introduction to Plotting ([static](https://github.com/e2nIEE/pandapipes/blob/master/tutorials/simple_plot.ipynb) / [interactive](https://mybinder.org/v2/gh/e2nIEE/pandapipes/master?filepath=tutorials/simple_plot.ipynb))
 
 
  More tutorials will be added soon.
