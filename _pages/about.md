@@ -321,6 +321,26 @@ the mean temperatures <math><mi>T<sub>diff,mean</sub></mi></math> is in a range 
     </mrow>
 </math>
 <br>
+In the following, the deviations of pressures and flow velocities from the OpenModelica and pandapipes
+calculations are graphically displayed for three different networks. The first net is the
+[Delta net](https://pandapipes.readthedocs.io/en/latest/networks/meshed/meshed_networks.html#delta)
+calculated with Prandtl-Colebrook where <math><mi>p<sub>diff</sub></mi></math> is less than 0.01:
+
+| <img src="{{"/images/about/validation/delta_pressure_deviations.png" | relative_url }}" alt=""/> | <img src="{{"/images/about/validation/delta_velocity_deviations.png" | relative_url }}" alt=""/> |
+
+For the [Pumps net](https://pandapipes.readthedocs.io/en/latest/networks/meshed/meshed_networks.html#pumps)
+using Swamee-Jain for calculation, <math><mi>p<sub>diff</sub></mi></math> is below 0.02 and
+has the below deviations in the junctions and the pipes:
+
+| <img src="{{"/images/about/validation/pumps_pressure_deviations.png" | relative_url }}" alt=""/> | <img src="{{"/images/about/validation/pumps_velocity_deviations.png" | relative_url }}" alt=""/> |
+
+At last the deviations for a network with valves are shown. Here, a limit of 0.4 must be set for the
+relative error with respect to pressure to pass the test. The [Valves network](https://pandapipes.readthedocs.io/en/latest/networks/t_cross/t_cross_networks.html#valves)
+was calculated with Prandtl-Colebrook:
+
+| <img src="{{"/images/about/validation/valves_pressure_deviations.png" | relative_url }}" alt=""/> | <img src="{{"/images/about/validation/valves_velocity_deviations.png" | relative_url }}" alt=""/> |
+
+<br>
 In order to create your own nets in OpenModelica and to perform a comparison with pandapipes,
 the elements that serve as equivalents for the components in pandapipes are listed hereafter:
 
