@@ -381,12 +381,12 @@ for this purpose the source code must be considered.
 The results of the calculations are shown in the following. The results for junction1
 and sink1 are highlighted in color. Also the deviations of the comparison are listed further down.
 
-<img src="{{"/images/about/validation/example_result_OM.PNG" | relative_url }}" alt=""/>
+<img src="{{"/images/about/validation/example_result_OM.png" | relative_url }}" alt=""/>
 <figcaption>Results of OpenModelica calculations with Prandtl-Colebrook.</figcaption>
 
 <br>
 
-<img src="{{"/images/about/validation/example_result_pp.PNG" | relative_url }}" alt=""/>
+<img src="{{"/images/about/validation/example_result_pp.png" | relative_url }}" alt=""/>
 <figcaption>Results of the pandapipes calculations with Prandtl-Colebrook and the results of the comparison with the OpenModelica simulation.</figcaption>
 
 <h2 id="citing">Citing pandpipes</h2>
