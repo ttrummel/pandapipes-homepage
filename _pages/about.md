@@ -215,7 +215,7 @@ The structures of all test networks are listed below:
 <figcaption>Legend of the network components.</figcaption>
 
 
-<h3 id="tests">STANET Tests</h3>
+<h3 id="tests_stanet">STANET Tests</h3>
 
 The STANET test nets were saved in CSV format so that a conversion
 into a json file can take place. A test is considered passed, if certain error tolerances are met.
@@ -255,7 +255,7 @@ is always less than 0.03.
 </math>
 
 
-<h3 id="tests">OpenModelica Tests</h3>
+<h3 id="tests_om">OpenModelica Tests</h3>
 
 Using the mo- and a mat-file containing the simulation results, the OpenModelica
 net will be converted into a pandapipes network.
@@ -351,7 +351,7 @@ In the case of heat network calculation, the DynamicPipe must be used instead of
 
 <img src="{{"/images/about/validation/DynamicPipe.png" | relative_url }}" alt=""/>
 
-<h3 id="tests"><i>Example</i></h3>
+<h3 id="tests_example"><i>Example</i></h3>
 
 In the following section an example is presented in which all the above mentioned components
 except the DynamicPipe appear. The components have the below parameters:
@@ -381,12 +381,12 @@ for this purpose the source code must be considered.
 The results of the calculations are shown in the following. The results for junction1
 and sink1 are highlighted in color. Also the deviations of the comparison are listed further down.
 
-<img src="{{"/images/about/validation/example_result_OM.png" | relative_url }}" alt=""/>
+<img src="{{"/images/about/validation/example_result_OM.PNG" | relative_url }}" alt=""/>
 <figcaption>Results of OpenModelica calculations with Prandtl-Colebrook.</figcaption>
 
 <br>
 
-<img src="{{"/images/about/validation/example_result_pp.png" | relative_url }}" alt=""/>
+<img src="{{"/images/about/validation/example_result_pp.PNG" | relative_url }}" alt=""/>
 <figcaption>Results of the pandapipes calculations with Prandtl-Colebrook and the results of the comparison with the OpenModelica simulation.</figcaption>
 
 <h2 id="citing">Citing pandpipes</h2>
